@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoTiQaniat", "DemoTiQaniat\DemoTiQaniat.csproj", "{9BE6F935-8D86-4813-A0B8-7E079A63A38A}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "..\..\..\..\DemoTiqaniat\Setup1\Setup1.vdproj", "{8015E02E-7F5C-43DE-BF1F-A2469B977F8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BE6F935-8D86-4813-A0B8-7E079A63A38A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BE6F935-8D86-4813-A0B8-7E079A63A38A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BE6F935-8D86-4813-A0B8-7E079A63A38A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BE6F935-8D86-4813-A0B8-7E079A63A38A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8015E02E-7F5C-43DE-BF1F-A2469B977F8E}.Debug|Any CPU.ActiveCfg = Debug
+		{8015E02E-7F5C-43DE-BF1F-A2469B977F8E}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3FAA58D7-1065-4BA2-BF1B-D038FA4AEDBF}
+	EndGlobalSection
+EndGlobal

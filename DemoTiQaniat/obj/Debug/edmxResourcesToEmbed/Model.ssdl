@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tiQaniatModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Reciever">
+    <Key>
+      <PropertyRef Name="InternalCode" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="InternalCode" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ID" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Type" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Governate" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="RegoinCity" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Street" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="BuildingNumber" Type="int" Nullable="false" />
+    <Property Name="PostCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Floor" Type="nvarchar" MaxLength="50" />
+    <Property Name="Room" Type="nvarchar" MaxLength="50" />
+    <Property Name="LandMark" Type="nvarchar" MaxLength="50" />
+    <Property Name="AdditonalInfo" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityContainer Name="tiQaniatModelStoreContainer">
+    <EntitySet Name="Reciever" EntityType="Self.Reciever" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

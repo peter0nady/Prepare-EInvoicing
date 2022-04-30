@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9BE6F935-8D86-4813-A0B8-7E079A63A38A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DemoTiQaniat</RootNamespace>
+    <AssemblyName>DemoTiQaniat</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <PublishUrl>E:\tiQaniat\Work\Original Files\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2FF5AB5C8D24969306C9588DE84B0026FC316A9F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DemoTiQaniat_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\tiQaniatSolution\setup\tax\System-1\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountAndPermissionEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountAndPermissionEdit.Designer.cs">
+      <DependentUpon>AccountAndPermissionEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountAndPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountAndPermission.Designer.cs">
+      <DependentUpon>AccountAndPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountReports.Designer.cs">
+      <DependentUpon>AccountReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdditionalInfoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdditionalInfoEdit.Designer.cs">
+      <DependentUpon>AdditionalInfoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdditionalInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdditionalInfo.Designer.cs">
+      <DependentUpon>AdditionalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountsPermissionsDataFrom .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountsPermissionsDataFrom .Designer.cs">
+      <DependentUpon>AccountsPermissionsDataFrom .cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionString.cs" />
+    <Compile Include="CurrencyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrencyReport.Designer.cs">
+      <DependentUpon>CurrencyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceReport.Designer.cs">
+      <DependentUpon>InvoiceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemsReport.Designer.cs">
+      <DependentUpon>ItemsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiverReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceiverReport.Designer.cs">
+      <DependentUpon>ReceiverReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TaxNameEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaxNameEdit.Designer.cs">
+      <DependentUpon>TaxNameEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaxNameReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaxNameReport.Designer.cs">
+      <DependentUpon>TaxNameReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferDataFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferDataFrom.Designer.cs">
+      <DependentUpon>TransferDataFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceEdit.Designer.cs">
+      <DependentUpon>InvoiceEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceDataFormat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceDataFormat.Designer.cs">
+      <DependentUpon>InvoiceDataFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceDataForm.Designer.cs">
+      <DependentUpon>InvoiceDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionalInfoData.cs" />
+    <Compile Include="TaxNameDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaxNameDataForm.Designer.cs">
+      <DependentUpon>TaxNameDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemsEdit.Designer.cs">
+      <DependentUpon>ItemsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemsDataForm .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemsDataForm .Designer.cs">
+      <DependentUpon>ItemsDataForm .cs</DependentUpon>
+    </Compile>
+    <Compile Include="UOMEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UOMEdit.Designer.cs">
+      <DependentUpon>UOMEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UOMDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UOMDataForm.Designer.cs">
+      <DependentUpon>UOMDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrencyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrencyEdit.Designer.cs">
+      <DependentUpon>CurrencyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Currency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Currency.Designer.cs">
+      <DependentUpon>Currency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrencyDataFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrencyDataFrom.Designer.cs">
+      <DependentUpon>CurrencyDataFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IssuerEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssuerEdit.Designer.cs">
+      <DependentUpon>IssuerEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IssuerDataFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssuerDataFrom.Designer.cs">
+      <DependentUpon>IssuerDataFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="First.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="First.Designer.cs">
+      <DependentUpon>First.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit.Designer.cs">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Issuer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Issuer.Designer.cs">
+      <DependentUpon>Issuer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IssuerReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssuerReport.Designer.cs">
+      <DependentUpon>IssuerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Items.Designer.cs">
+      <DependentUpon>Items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaxName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaxName.Designer.cs">
+      <DependentUpon>TaxName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UOM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UOM.Designer.cs">
+      <DependentUpon>UOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UOMReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UOMReport.Designer.cs">
+      <DependentUpon>UOMReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Egy_TaxDataSet.cs">
+      <DependentUpon>_Egy_TaxDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Egy_TaxDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Egy_TaxDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountAndPermissionEdit.resx">
+      <DependentUpon>AccountAndPermissionEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountAndPermission.resx">
+      <DependentUpon>AccountAndPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports.resx">
+      <DependentUpon>AccountReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdditionalInfoEdit.resx">
+      <DependentUpon>AdditionalInfoEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdditionalInfo.resx">
+      <DependentUpon>AdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountsPermissionsDataFrom .resx">
+      <DependentUpon>AccountsPermissionsDataFrom .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrencyReport.resx">
+      <DependentUpon>CurrencyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceReport.resx">
+      <DependentUpon>InvoiceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemsReport.resx">
+      <DependentUpon>ItemsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiverReport.resx">
+      <DependentUpon>ReceiverReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report5.rdlc" />
+    <EmbeddedResource Include="Report6.rdlc" />
+    <EmbeddedResource Include="Report7.rdlc" />
+    <EmbeddedResource Include="Report8.rdlc" />
+    <EmbeddedResource Include="TaxNameEdit.resx">
+      <DependentUpon>TaxNameEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaxNameReport.resx">
+      <DependentUpon>TaxNameReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferDataFrom.resx">
+      <DependentUpon>TransferDataFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceEdit.resx">
+      <DependentUpon>InvoiceEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceDataFormat.resx">
+      <DependentUpon>InvoiceDataFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceDataForm.resx">
+      <DependentUpon>InvoiceDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaxNameDataForm.resx">
+      <DependentUpon>TaxNameDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemsEdit.resx">
+      <DependentUpon>ItemsEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemsDataForm .resx">
+      <DependentUpon>ItemsDataForm .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UOMEdit.resx">
+      <DependentUpon>UOMEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UOMDataForm.resx">
+      <DependentUpon>UOMDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrencyEdit.resx">
+      <DependentUpon>CurrencyEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Currency.resx">
+      <DependentUpon>Currency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrencyDataFrom.resx">
+      <DependentUpon>CurrencyDataFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IssuerEdit.resx">
+      <DependentUpon>IssuerEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IssuerDataFrom.resx">
+      <DependentUpon>IssuerDataFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="First.resx">
+      <DependentUpon>First.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit.resx">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Issuer.resx">
+      <DependentUpon>Issuer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IssuerReport.resx">
+      <DependentUpon>IssuerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items.resx">
+      <DependentUpon>Items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaxName.resx">
+      <DependentUpon>TaxName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UOM.resx">
+      <DependentUpon>UOM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UOMReport.resx">
+      <DependentUpon>UOMReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="_Egy_TaxDataSet.xsc">
+      <DependentUpon>_Egy_TaxDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_Egy_TaxDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Egy_TaxDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Egy_TaxDataSet.xss">
+      <DependentUpon>_Egy_TaxDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
